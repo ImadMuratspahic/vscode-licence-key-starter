@@ -1,0 +1,28 @@
+{
+  "name": "vscode-licence-key-starter",
+  "displayName": "Licence Key Starter",
+  "description": "A minimal VS Code extension template with a free tier and a Pro tier unlocked by a licence key.",
+  "version": "0.1.0",
+  "publisher": "imadmuratspahic",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": { "type": "git", "url": "https://github.com/ImadMuratspahic/vscode-licence-key-starter.git" },
+  "engines": { "vscode": "^1.80.0", "node": ">=20" },
+  "categories": ["Other"],
+  "keywords": ["licence key", "license key", "template", "starter"],
+  "main": "./extension.js",
+  "scripts": {
+    "check": "node --check extension.js && node --check src/licence.js",
+    "test": "node --test test/licence.test.js",
+    "package": "npx --yes @vscode/vsce package"
+  },
+  "contributes": {
+    "commands": [
+      { "command": "starter.freeHello", "title": "Starter: Free Hello" },
+      { "command": "starter.proHello", "title": "Starter: Pro Hello (needs Pro)" },
+      { "command": "starter.buyPro", "title": "Starter: Buy Pro" },
+      { "command": "starter.enterKey", "title": "Starter: Enter Pro Licence Key" },
+      { "command": "starter.status", "title": "Starter: Show Licence Status" },
+      { "command": "starter.removeKey", "title": "Starter: Remove Licence From This Machine" }
+    ]
+  }
+}
